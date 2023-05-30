@@ -8,14 +8,14 @@ public class ExercicioMatriz1 {
 		int elementos = 3;
 		int matrizNumeros[][] = new int[elementos][elementos];
 		int contador = 1;
-		int soma = 0;
+		int somaPrincipal = 0, somaSecundaria = 0;
+		
 
 		Scanner leia = new Scanner(System.in);
 		
 		for (int linha = 0; linha < matrizNumeros.length; linha++) {
 			for (int coluna = 0; coluna < matrizNumeros[linha].length; coluna++) {
 				matrizNumeros[linha][coluna] = contador;
-				soma += matrizNumeros[linha][coluna];
 				contador++;
 			}
 		}
@@ -30,17 +30,24 @@ public class ExercicioMatriz1 {
 		System.out.println("Elementos da Diagonal principal");
 		for(int linha = 0; linha < matrizNumeros.length; linha++) {
 			System.out.print(matrizNumeros[linha][linha] + " , ");
-		}
+			somaPrincipal+= matrizNumeros[linha][linha];
+		
+			
+		} 
+		System.out.println("\nSoma dos Elementos da Diagonal Principal: " + somaPrincipal);
+		
 		
 		System.out.println("\nElementos da Diagonal secundária");
 		for(int linha = 0; linha < matrizNumeros.length; linha++) {
-			for(int coluna = matrizNumeros.length-1; coluna>=0;coluna-- ) {
+			for(int coluna = matrizNumeros.length-1; coluna >= 0;coluna-- ) {
 				System.out.print(matrizNumeros[linha][coluna] + " , ");
+				somaSecundaria+= matrizNumeros[linha][coluna];
 				linha++;
 			}
 		}
 		
-		System.out.println("\nSoma dos Elementos da Diagonal Principal: ");
+		System.out.println("\nSoma dos Elementos da Diagonal Secundária: " + somaSecundaria);
+		
 		
 	}
 }
