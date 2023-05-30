@@ -6,8 +6,7 @@ public class Exercicio2{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int idade;
-        int contadorMenor21 = 0;
-        int contadorMaior50 = 0;
+        int contadorMenor21 = 0, contadorMaior50 = 0;
 
         while (true) {
             System.out.println("Digite a idade (ou um número negativo para sair):");
